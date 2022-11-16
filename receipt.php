@@ -1,10 +1,3 @@
-<!--
-    author : Liu Zhemin (U1621997K)
-    Project for CZ3006 Net Centric Computing Nanyang Technological University.
-    Project was done as part of a coursework requirement for CZ3006 in AY17/18 Semester 1.
-
-    php includes both css and javascript codes as the instruction was to create a servide-side PHP program
- -->
 <!DOCTYPE html>
 <html lang="en">
 
