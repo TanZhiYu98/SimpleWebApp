@@ -1,8 +1,5 @@
 # Simple Web Application
 
-## Sample Front End User Interface
-![Front-End UI](img/github.png?raw=true "front-end")
-
 Folder Structure Conventions
 ============================
 
