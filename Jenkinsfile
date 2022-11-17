@@ -12,11 +12,18 @@ pipeline {
 				dependencyCheck additionalArguments: '--format HTML --format XML', odcInstallation: 'Default'
 			}
 		}
-    stage('UI Test'){
-      steps {
-        echo 'UI Test'
-      }
-    }
+    		stage('UI Test'){
+      			steps {
+        			echo 'UI Test'
+      			}
+    		}
+		stage('SonarQube'){
+			steps {
+				withSonarQubeEnv('My SonarQube Server') {
+				sh 'mvn clean package sonar:sonar'
+			      }
+			}
+		}
 	}	
 	post {
 		success {
