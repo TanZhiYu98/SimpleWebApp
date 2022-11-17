@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script type="text/javascript">
+    	function checkPassword(form)
+    	{
+    		var input = form.userName.value;
+    		var password = .{8,}$;
+    		if(input.value.match(password))
+    		{
+    			const f = require('fs');
+				const readline = require('readline');
+				var user_file = './10-million-password-list-top-1000.txt';
+				var r = readline.createInterface({
+				    input : f.createReadStream(user_file)
+				});
+				if(input.includes(r)){
+					return false;
+				};
+				else {
+					return true;
+				}
+    		}
+    		else{
+    			return false;
+    		}
+    	}
+    </script>
+</head>
+<body>
+	<div class="container">
+		<h1 class="h1"><b>Login Page</b></h1>
+		<form action="welcome.html" method="post" onSubmit="return checkPassword(this);">
+			<label class="control-label" for="userNameID">Password:</label>
+            <input type="text" name="userName" id="userNameID" class="form-control" placeholder="Please Enter Your Password">
+			<div id="usernamePopup" style="display:none;">
+	            <span style="color:red;">Please fill in your password.</span>
+	        </div>
+	        <input type="submit" class="btn btn-primary" value="Login">	
+	    </form>
+	</div>
+</body>
+</html>
